@@ -1,16 +1,47 @@
-# aplikasi_pertama
+# 🎬 Izzbox — Aplikasi Movie Diary Berbasis Flutter
 
-A new Flutter project.
+Izzbox adalah aplikasi movie diary berbasis Flutter yang terinspirasi dari Letterboxd.  
+Aplikasi ini berfokus pada pengembangan frontend, pengelolaan state lokal, serta interaksi pengguna tanpa menggunakan backend.
 
-## Getting Started
+Project ini dibuat sebagai portofolio pengembangan mobile, khususnya untuk menunjukkan pemahaman dasar hingga menengah dalam pengembangan aplikasi Flutter.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Fitur Utama
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Menampilkan daftar film lengkap dengan poster
+- Halaman detail film dengan animasi Hero
+- Menandai film sebagai Liked dan Watched
+- Menulis review pribadi untuk film
+- Halaman profil yang menampilkan:
+  - Jumlah film yang ditonton
+  - Jumlah film yang disukai
+  - Daftar film yang direview oleh pengguna
+- Tampilan dark theme yang konsisten
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧠 Konsep yang Diterapkan
+
+- Local state management menggunakan `setState`
+- Single source of truth untuk data film
+- Pengiriman state antar halaman melalui constructor
+- Pemisahan struktur kode:
+  - `models` → data
+  - `pages` → halaman UI
+  - `widgets` → komponen reusable
+- Pengambilan keputusan UI/UX yang sederhana dan tidak berlebihan
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- Flutter
+- Dart
+- Material Design
+- Network Image (TMDB public image CDN untuk keperluan demo)
+- Tanpa backend (frontend-only)
+
+---
+
+
