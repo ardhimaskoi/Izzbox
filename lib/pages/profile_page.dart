@@ -95,62 +95,41 @@ class ProfilePage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       itemCount: myReviewedFilms.length,
                       separatorBuilder: (_, __) => const SizedBox(width: 12),
-                      itemBuilder: (context, index) {
+itemBuilder: (context, index) {
                         final film = myReviewedFilms[index];
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => DetailPage(film: film),
-                              ),
-                            );
-                          },
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              // ===== POSTER =====
-                              Hero(
-                                tag: film.title,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image.network(
-                                    film.posterUrl,
-                                    width: 90,
-                                    height: 120,
-                                    fit: BoxFit.cover,
-                                    loadingBuilder: (context, child, progress) {
-                                      if (progress == null) return child;
-                                      return Container(
+                        return SizedBox(
+                          width: 90,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => DetailPage(film: film),
+                                ),
+                              );
+                            },
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // ===== POSTER =====
+                                Expanded(
+                                  child: Hero(
+                                    tag: film.title,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.network(
+                                        film.posterUrl,
                                         width: 90,
-                                        height: 120,
-                                        color: Colors.grey.shade900,
-                                        child: const Center(
-                                          child: CircularProgressIndicator(
-                                            strokeWidth: 2,
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                    errorBuilder: (_, __, ___) => Container(
-                                      width: 90,
-                                      height: 120,
-                                      color: Colors.grey.shade900,
-                                      child: const Icon(
-                                        Icons.broken_image,
-                                        color: Colors.white70,
+                                        fit: BoxFit.cover,
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
 
-                              const SizedBox(height: 6),
+                                const SizedBox(height: 6),
 
-                              // ===== TITLE =====
-                              SizedBox(
-                                width: 90,
-                                child: Text(
+                                // ===== TITLE =====
+                                Text(
                                   film.title,
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
@@ -159,8 +138,8 @@ class ProfilePage extends StatelessWidget {
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         );
                       },
