@@ -10,7 +10,6 @@ Project ini dibuat sebagai portofolio pengembangan mobile, khususnya untuk menun
 ## ✨ Fitur Utama
 
 - Menampilkan daftar film lengkap dengan poster
-- Halaman detail film dengan animasi Hero
 - Menandai film sebagai Liked dan Watched
 - Menulis review pribadi untuk film
 - Halaman profil yang menampilkan:
